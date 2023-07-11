@@ -56,6 +56,7 @@ public class WildSignListener implements Listener {
             World asylum = seekAsylum(((Sign) bs).getLines(), false);
 
             WildTP.debug(bob.getName() + " used a WildTP sign (world:" + asylum + ")");
+            ev.setCancelled(true);
             new TeleportGoneWild(Trigger.SIGN, ev.getPlayer(), asylum).WildTeleport();
         }
     }
